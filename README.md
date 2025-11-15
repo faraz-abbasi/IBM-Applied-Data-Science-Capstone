@@ -1,108 +1,98 @@
-# 🚀 Applied Data Science Capstone Project  
-### Predicting Falcon 9 First-Stage Landing Success
+# 🚀 SpaceX Falcon-9 Landing Success Prediction
+Predict whether the **SpaceX Falcon 9 first stage will land successfully** after launch.
 
-SpaceX has transformed the aerospace industry by dramatically reducing launch costs—offering Falcon 9 missions at **$62M** compared to competitors’ **$165M+**.  
-A major part of this cost advantage comes from **reusing the first stage** of the rocket.
-
-This capstone project focuses on **predicting the landing success** of Falcon 9’s first stage using data science and machine learning techniques. Accurate predictions help estimate launch costs and provide valuable insights to companies bidding against SpaceX.
-
----
-
-## 📌 Objectives
-
-This project is organized into multiple modules, each contributing to a complete end-to-end data science workflow.
+SpaceX advertises Falcon 9 launches at **$62M**, while competitors charge over **$165M**.  
+This price difference is largely due to **SpaceX’s ability to reuse the first stage**.  
+Therefore, predicting whether the booster will land allows us to estimate launch costs—valuable information for organizations competing against SpaceX.
 
 ---
 
-## 1. 🔄 Request to the SpaceX API & Data Wrangling
+# 📂 Project Overview
 
-- **Data Collection:** Retrieved historical launch data via GET requests to the SpaceX API.  
-- **Data Cleaning:** Cleaned and standardized the raw data, addressing missing values and inconsistencies.
+This capstone project uses **data science methodologies**, **web scraping**, **REST APIs**, **interactive dashboards**, and **machine learning** to build a predictive model determining first-stage landing success.
 
----
-
-## 2. 🌐 Web Scraping Falcon 9 Launch Records
-
-- **BeautifulSoup Scraper:** Extracted Falcon 9 launch records from Wikipedia.  
-- **Data Parsing:** Converted scraped HTML tables into Pandas DataFrames.
+The project is divided into four major parts:
 
 ---
 
-## 3. 📊 Exploratory Data Analysis (EDA) & Training Labels
+## 1️⃣ Data Collection, Web Scraping & Data Wrangling
 
-- **EDA:** Conducted exploratory analysis using Matplotlib and Seaborn.  
-- **Training Labels:** Created and encoded the target variable for machine learning.
-
----
-
-## 4. 🗄️ Database Integration (Db2)
-
-- **Data Loading:** Stored processed data into an IBM Db2 database.  
-- **SQL Analytics:** Ran SQL queries to generate insights and answer data questions.
-
----
-
-## 5. 🧩 Feature Engineering & Visualization
-
-- **Feature Engineering:** Built additional features to increase model performance.  
-- **Geospatial Visualization:** Used **Folium** to create interactive maps of launch sites and success rates.
+### **Objectives**
+- Write Python code to manipulate data using **Pandas**.
+- Convert JSON data into a **Pandas DataFrame**.
+- Create and share Jupyter notebooks using GitHub.
+- Define and formulate a real-world business problem using data science methodology.
+- Load, clean, and explore datasets to extract meaningful insights.
+- Collect launch data via:
+  - **SpaceX REST API**
+  - **Web scraping** (Wikipedia Falcon 9 record)
 
 ---
 
-## 6. 📈 Interactive Visual Analytics with Plotly Dash
+## 2️⃣ Exploratory Data Analysis (EDA)
 
-- **Dash App Development:** Built an interactive dashboard using Plotly Dash.  
-- **User Controls:** Added dropdowns, sliders, pie charts, and scatter plots for real-time data exploration.
+### **Objectives**
+- Use REST API and web scraping to collect and prepare data.
+- Convert all collected data into a unified DataFrame.
+- Perform data wrangling to address missing values and inconsistencies.
+- Create:
+  - **Scatter plots**
+  - **Bar charts**
+  - **Correlation visualizations**
+- Execute **SQL queries** to analyze launch records.
+- Use visualizations to uncover meaningful patterns for model development.
 
 ---
 
-## 7. 🤖 Machine Learning Models & Hyperparameter Tuning
+## 3️⃣ Interactive Visual Analytics & Dashboards
 
-- **Preprocessing:** Standardized features and split the data into train/test sets.  
-- **Model Tuning:** Applied GridSearchCV on:
-  - Support Vector Machines  
+Built using:
+- **Plotly Dash** (interactive dashboard)
+- **Folium** (interactive geospatial maps)
+
+### **Objectives**
+- Build a dashboard with:
+  - **Pie charts** (mission outcomes)
+  - **Scatter plots** (payload vs. success)
+  - **Dynamic filters** (dropdowns, sliders)
+- Use Folium to:
+  - Plot launch site coordinates
+  - Calculate distances
+  - Mark clusters
+  - Visualize success/failure distribution on the map
+- Create tools to interactively analyze launch records.
+
+---
+
+## 4️⃣ Predictive Analysis (Classification Models)
+
+Using machine learning to predict Falcon 9 landing success.
+
+### **Objectives**
+- Split the dataset into **training** and **testing** sets.
+- Train multiple classification algorithms:
+  - **Support Vector Machines (SVM)**
+  - **Decision Trees**
+  - **Logistic Regression**
+- Perform **hyperparameter tuning** using GridSearchCV.
+- Select the best model based on test accuracy.
+- Use the predictive model to support real-world business decision-making.
+
+---
+
+# 🧠 Skills & Tools Used
+
+- **Python, Pandas, NumPy**
+- **REST APIs & Web Scraping (BeautifulSoup)**
+- **Matplotlib, Seaborn**
+- **SQL & Db2**
+- **Plotly Dash**
+- **Folium**
+- **Machine Learning (scikit-learn)**  
+  - SVM  
   - Decision Trees  
   - Logistic Regression  
-- **Evaluation:** Selected the best-performing model based on test accuracy.
+  - GridSearchCV
 
 ---
 
-## 🏆 Results
-
-| Model | Test Accuracy |
-|-------|----------------|
-| **Decision Tree Classifier** | **0.9444** ⭐ Best |
-| SVM | 0.8333 |
-| K-Nearest Neighbors | 0.8333 |
-
-The **Decision Tree Classifier** achieved the highest accuracy, making it the strongest model for predicting first-stage landing outcomes.
-
----
-
-## 🧭 Conclusion
-
-This project covers the full lifecycle of a data science solution—from data acquisition and cleaning, to visualization, dashboarding, and machine learning.
-
-Predicting first-stage landing success provides key insights into **launch cost estimation** and **competitive bid strategy** for the aerospace industry.
-
----
-
-## 📁 Repository Structure
-
-```
-.
-├── data/            # Datasets and data-processing resources
-├── notebooks/       # Jupyter notebooks documenting each module
-├── scripts/         # Scripts for ETL, visualization, and modeling
-├── dash_app/        # Plotly Dash interactive dashboard
-└── README.md        # Project overview and detailed documentation
-
-```
----
-
-## 🙏 Acknowledgments
-
-- **IBM** — For providing the course and materials  
-- **Coursera** — For the platform hosting the program  
-
----
